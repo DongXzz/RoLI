@@ -1,6 +1,7 @@
 # RoLI
+This repository contains the official PyTorch implementation for Robust Linear Initialization (RoLI), CVPR 2024.
 
-https://arxiv.org/abs/2312.05716
+Paper link: [Initialization Matters for Adversarial Transfer Learning](https://arxiv.org/abs/2312.05716)
 
 ------
 This repository contains the official PyTorch implementation for Robust Linear Initialization (RoLI).
@@ -35,7 +36,7 @@ The train/val/test splits for other datasets are provided in [`data_splits`](dat
 
 Download and place the pretrained model to [`pretrain`](pretrain).
 
-- Robust Pretrained Model:[ARES2.0](https://github.com/thu-ml/ares/tree/main/robust_training) for SwinB and ViTB.
+- Robust Pretrained Model: [ARES2.0](https://github.com/thu-ml/ares/tree/main/robust_training) for SwinB and ViTB.
 
 - Non-robust Pretrained Model: For Swin Transformer(swin_base_patch4_window7_224), we use the weights from [official implementation](https://github.com/microsoft/Swin-Transformer). For ViT, we use the weights from [torch vision](https://download.pytorch.org/models/vit_b_16-c867db91.pth). 
 
@@ -99,11 +100,11 @@ python autoattack.py --config-file=configs/adapter/stanforddogs_roli_eval.yaml
 If you find our work helpful in your research, please cite it as:
 
 ```
-@article{hua2023initialization,
+@inproceedings{hua2024initialization,
   title={Initialization Matters for Adversarial Transfer Learning},
   author={Hua, Andong and Gu, Jindong and Xue, Zhiyu and Carlini, Nicholas and Wong, Eric and Qin, Yao},
-  journal={arXiv preprint arXiv:2312.05716},
-  year={2023}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024}
 }
 ```
 ## Acknowledgement:
