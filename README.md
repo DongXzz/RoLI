@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Datasets preperation:
 
-We use CIFAR-10 and CIFAR-100 from [Visual Task Adaptation Benchmark](https://google-research.github.io/task_adaptation/) (VTAB). Please see [`VTAB_SETUP.md`](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md) for instructions. Note, only CIFAR-10 and CIFAR-100 are required. We follow the official train/test splits and the size of validation set is specified in ['TRAIN_NUM_PERCENT'](configs/adapter/cifar10_roli.yaml) in configs.
+We use CIFAR-10 and CIFAR-100 from [Visual Task Adaptation Benchmark](https://google-research.github.io/task_adaptation/) (VTAB). Please see [`VTAB_SETUP.md`](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md) for instructions. Note, only CIFAR-10 and CIFAR-100 are required. We follow the official train/test splits and the size of validation set is specified in [TRAIN_NUM_PERCENT](configs/adapter/cifar10_roli.yaml) in configs.
 
 The train/val/test splits for other datasets are provided in [`data_splits`](data_splits). Copy the JSON file to the location where your dataset is downloaded.
 
