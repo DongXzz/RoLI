@@ -1,0 +1,26 @@
+_BASE_: "../base-bias-adv.yaml"
+OUTPUT_DIR: #TODO: need to specify output path here
+DATA:
+  NAME: "vtab-cifar(num_classes=100)"
+  DATAPATH: #TODO: need to specify here
+  NUMBER_CLASSES: 100
+  MULTILABEL: False
+  BATCH_SIZE: 64
+  FEATURE: "ARES_Swin_base_patch4_window7_224_AT"
+  TRAIN_NUM_PERCENT: 100
+MODEL:
+  TYPE: "swin"
+  MODEL_ROOT: "pretrain"
+  RESIZE: True
+  SAVE_CHECKPOINT: True
+SOLVER:
+  BASE_LR: 0.005
+  WEIGHT_DECAY: 0.001
+  TOTAL_EPOCH: 20
+ADV:
+  TRAIN_ATTACK_EPS: 0.03137254901
+  TRAIN_ATTACK_STEPS: 7
+  VAL_ATTACK_EPS: 0.03137254901
+  VAL_ATTACK_STEPS: 10
+  HALF_ADV: False
+VAL_FREQ: 1

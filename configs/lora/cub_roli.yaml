@@ -1,0 +1,32 @@
+_BASE_: "../base-lora-adv.yaml"
+OUTPUT_DIR: #TODO: need to specify output path here
+DATA:
+  NAME: "CUB"
+  DATAPATH: #TODO: need to specify here
+  NUMBER_CLASSES: 200
+  MULTILABEL: False
+  BATCH_SIZE: 64
+  FEATURE: "ARES_Swin_base_patch4_window7_224_AT"
+MODEL:
+  TYPE: "swin"
+  LORA:
+    RANK: 16
+    DROPOUT: 0.1
+    ALPHA: 16
+    ZEROINIT: True
+  MODEL_ROOT: "pretrain"
+  RESIZE: False
+  SAVE_CHECKPOINT: True
+  WEIGHT_PATH: #TODO: need to specify the trained RanLI-Linear checkpoint here
+  WEIGHT_STRICT: False
+SOLVER:
+  TOTAL_EPOCH: 60
+  BASE_LR: 0.005
+  WEIGHT_DECAY: 0.0001
+ADV:
+  TRAIN_ATTACK_EPS: 0.03137254901
+  TRAIN_ATTACK_STEPS: 7
+  VAL_ATTACK_EPS: 0.03137254901
+  VAL_ATTACK_STEPS: 10
+  HALF_ADV: False
+VAL_FREQ: 1

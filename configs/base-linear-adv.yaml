@@ -1,0 +1,21 @@
+NUM_GPUS: 1
+NUM_SHARDS: 1
+OUTPUT_DIR: "results"
+RUN_N_TIMES: 1
+MODEL:
+  TRANSFER_TYPE: "linear"
+  LINEAR:
+    MLP_SIZES: []
+SOLVER:
+  SCHEDULER: "cosine"
+  PATIENCE: 300
+  LOSS: "softmax"
+  OPTIMIZER: "sgd"
+  MOMENTUM: 0.9
+  LOG_EVERY_N: 100
+  WARMUP_EPOCH: 10
+  TOTAL_EPOCH: 100
+DATA:
+  TRAIN_NUM_PERCENT: 100
+  FEATURE: "adv_sup_vit16_imagenet"
+TRAIN_MODE: "adv"

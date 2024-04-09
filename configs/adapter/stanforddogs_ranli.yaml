@@ -1,0 +1,25 @@
+_BASE_: "../base-adapter-adv.yaml"
+OUTPUT_DIR: #TODO: need to specify output path here
+DATA:
+  NAME: "StanfordDogs"
+  DATAPATH: #TODO: need to specify here
+  NUMBER_CLASSES: 120
+  MULTILABEL: False
+  BATCH_SIZE: 64
+  FEATURE: "ARES_Swin_base_patch4_window7_224_AT"
+MODEL:
+  TYPE: "swin"
+  MODEL_ROOT: "pretrain"
+  RESIZE: False
+  SAVE_CHECKPOINT: True
+SOLVER:
+  BASE_LR: 0.005
+  WEIGHT_DECAY: 0.0001
+  TOTAL_EPOCH: 40
+ADV:
+  TRAIN_ATTACK_EPS: 0.03137254901
+  TRAIN_ATTACK_STEPS: 7
+  VAL_ATTACK_EPS: 0.03137254901
+  VAL_ATTACK_STEPS: 10
+  HALF_ADV: False
+VAL_FREQ: 1
