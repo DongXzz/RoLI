@@ -38,12 +38,12 @@ Download and place the pretrained model to [`pretrain`](pretrain).
 
 - Robust Pretrained Model: [ARES2.0](https://github.com/thu-ml/ares/tree/main/robust_training) for SwinB and ViTB.
 
-- Non-robust Pretrained Model: For Swin Transformer(swin_base_patch4_window7_224), we use the weights from [official implementation](https://github.com/microsoft/Swin-Transformer). For ViT, we use the weights from [torch vision](https://download.pytorch.org/models/vit_b_16-c867db91.pth). 
+- Non-robust Pretrained Model: For Swin Transformer(swin_base_patch4_window7_224), we use the weights from [official implementation](https://github.com/microsoft/Swin-Transformer). For ViT, we use the weights from [torchvision](https://download.pytorch.org/models/vit_b_16-c867db91.pth). 
 
 
 ## Training:
 
-We provide training configs for both RoLI and RanLI. Our trained RoLI checkpoints can be found at [google drive](https://drive.google.com/drive/folders/1EGboFnNayP7s5HmgKJGbPvimLLxIrMq9).
+We provide training configs for both RoLI and RanLI. Our trained RoLI checkpoints can be found at [google drive](https://drive.google.com/file/d/1TX9l8OUS3PPvQkGYWlu6rJDjRxaJrci_/view?usp=sharing).
 
 Before training, make sure to set the OUTPUT_DIR and change the DATAPATH to the location where your dataset is downloaded.
 
